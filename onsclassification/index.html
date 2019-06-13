@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<title>ONS Classification of Areas</title>
+</head>
+<body>
+   
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" onclick="getUrl('', '<li class=\'breadcrumb-item active\' aria-current=\'page\'>Overview<li>')">Overview <span class="sr-only">(current)</span></a>
+      </li>
+
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown_Constrained city dwellers" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                
+              Constrained city dwellers
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown_Constrained city dwellers">
+              				<a class="dropdown-item" href="#" onclick="getUrl('_Constrainedcitydwellers', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Constrained city dwellers</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Overview<li>        ')">Overview</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Constrainedcitydwellers_Ageingcitydwellers', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Constrained city dwellers</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Ageing city dwellers<li>        ')">Ageing city dwellers</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Constrainedcitydwellers_Whitecommunities', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Constrained city dwellers</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>White communities<li>        ')">White communities</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Constrainedcitydwellers_Challengeddiversity', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Constrained city dwellers</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Challenged diversity<li>        ')">Challenged diversity</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Constrainedcitydwellers_Constrainedflatdwellers', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Constrained city dwellers</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Constrained flat dwellers<li>        ')">Constrained flat dwellers</a>
+
+            </div>
+        </li>    
+    
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown_Urbanites" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                
+              Urbanites
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown_Urbanites">
+              				<a class="dropdown-item" href="#" onclick="getUrl('_Urbanites', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Urbanites</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Overview<li>        ')">Overview</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Urbanites_Ageingurbanliving', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Urbanites</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Ageing urban living<li>        ')">Ageing urban living</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Urbanites_Urbanprofessionalsandfamilies', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Urbanites</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Urban professionals and families<li>        ')">Urban professionals and families</a>
+
+            </div>
+        </li>    
+    
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown_Suburbanites" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                
+              Suburbanites
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown_Suburbanites">
+              				<a class="dropdown-item" href="#" onclick="getUrl('_Suburbanites', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Suburbanites</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Overview<li>        ')">Overview</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Suburbanites_Suburbanachievers', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Suburbanites</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Suburban achievers<li>        ')">Suburban achievers</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Suburbanites_Semi-detachedsuburbia', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Suburbanites</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Semi-detached suburbia<li>        ')">Semi-detached suburbia</a>
+
+            </div>
+        </li>    
+    
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown_Cosmopolitans" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                
+              Cosmopolitans
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown_Cosmopolitans">
+              				<a class="dropdown-item" href="#" onclick="getUrl('_Cosmopolitans', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Cosmopolitans</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Overview<li>        ')">Overview</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Cosmopolitans_Comfortablecosmopolitan', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Cosmopolitans</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Comfortable cosmopolitan<li>        ')">Comfortable cosmopolitan</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Cosmopolitans_Studentsaroundcampus', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Cosmopolitans</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Students around campus<li>        ')">Students around campus</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Cosmopolitans_Innercitystudents', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Cosmopolitans</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Inner city students<li>        ')">Inner city students</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Cosmopolitans_Aspiringandaffluent', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Cosmopolitans</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Aspiring and affluent<li>        ')">Aspiring and affluent</a>
+
+            </div>
+        </li>    
+    
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown_Hard-pressed living" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                
+              Hard-pressed living
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown_Hard-pressed living">
+              				<a class="dropdown-item" href="#" onclick="getUrl('_Hard-pressedliving', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Hard-pressed living</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Overview<li>        ')">Overview</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Hard-pressedliving_Challengedterracedworkers', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Hard-pressed living</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Challenged terraced workers<li>        ')">Challenged terraced workers</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Hard-pressedliving_Hardpressedageingworkers', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Hard-pressed living</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Hard pressed ageing workers<li>        ')">Hard pressed ageing workers</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Hard-pressedliving_Migrationandchurn', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Hard-pressed living</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Migration and churn<li>        ')">Migration and churn</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Hard-pressedliving_Industriouscommunities', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Hard-pressed living</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Industrious communities<li>        ')">Industrious communities</a>
+
+            </div>
+        </li>    
+    
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown_Multicultural metropolitans" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                
+              Multicultural metropolitans
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown_Multicultural metropolitans">
+              				<a class="dropdown-item" href="#" onclick="getUrl('_Multiculturalmetropolitans', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Multicultural metropolitans</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Overview<li>        ')">Overview</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Multiculturalmetropolitans_Rentedfamilyliving', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Multicultural metropolitans</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Rented family living<li>        ')">Rented family living</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Multiculturalmetropolitans_Asiantraits', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Multicultural metropolitans</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Asian traits<li>        ')">Asian traits</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Multiculturalmetropolitans_ChallengedAsianterraces', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Multicultural metropolitans</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Challenged Asian terraces<li>        ')">Challenged Asian terraces</a>
+
+            </div>
+        </li>    
+    
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown_Rural residents" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                
+              Rural residents
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown_Rural residents">
+              				<a class="dropdown-item" href="#" onclick="getUrl('_Ruralresidents', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Rural residents</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Overview<li>        ')">Overview</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Ruralresidents_Ruraltenants', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Rural residents</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Rural tenants<li>        ')">Rural tenants</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Ruralresidents_Farmingcommunities', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Rural residents</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Farming communities<li>        ')">Farming communities</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Ruralresidents_Ageingruraldwellers', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Rural residents</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Ageing rural dwellers<li>        ')">Ageing rural dwellers</a>
+
+            </div>
+        </li>    
+    
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown_Ethnicity central" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                
+              Ethnicity central
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown_Ethnicity central">
+              				<a class="dropdown-item" href="#" onclick="getUrl('_Ethnicitycentral', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Ethnicity central</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Overview<li>        ')">Overview</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Ethnicitycentral_Ethnicdynamics', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Ethnicity central</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Ethnic dynamics<li>        ')">Ethnic dynamics</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Ethnicitycentral_Aspirationaltechies', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Ethnicity central</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Aspirational techies<li>        ')">Aspirational techies</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Ethnicitycentral_Ethnicfamilylife', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Ethnicity central</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Ethnic family life<li>        ')">Ethnic family life</a>
+				<a class="dropdown-item" href="#" onclick="getUrl('_Ethnicitycentral_Endeavouringethnicmix', '            <li class=\'breadcrumb-item\'>Overview</li>            <li class=\'breadcrumb-item\'>Ethnicity central</li>            <li class=\'breadcrumb-item active\' aria-current=\'page\'>Endeavouring ethnic mix<li>        ')">Endeavouring ethnic mix</a>
+
+            </div>
+        </li>    
+    
+	      
+      
+    
+    </ul>
+  </div>
+</nav>
+<div id="bcd" class="mybc">
+</div>
+
+<div class="embed-responsive embed-responsive-1by1" style="height:60%;width:70%;" align="center">        
+<iframe id="myIFrame" class="embed-responsive-item" frameborder="0" scrolling="no" style="height:60%;width:80%;"></iframe>
+</div>   
+
+<script>
+        function getUrl(item, bcd) {
+           url = 'https://rahulved.github.io/onsclassification/onsmap'+item+'.html'; 
+           document.getElementById('myIFrame').setAttribute('src', url);
+		   bcd=`<nav aria-label="breadcrumb">
+			  <ol class="breadcrumb">`+
+			  bcd+
+			  `</ol>
+			   </nav>`;
+		   $("#bcd").html(bcd)
+        };
+
+		getUrl('', '<li class="breadcrumb-item active" aria-current="page">Overview</li>');
+
+</script>
+
+</body>
+
+			
+
+
+
+
